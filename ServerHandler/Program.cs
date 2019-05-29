@@ -15,12 +15,7 @@ namespace ServerHandler {
                 e.Response(ServerFunctions.Run(e.Data));
             };
             handler.Init(PORT);
-
             Thread.Sleep(-1);
-
-            /*
-            
-            */
         }
     }
 }
