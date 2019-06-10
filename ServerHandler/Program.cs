@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -15,6 +16,9 @@ namespace ServerHandler {
                 e.Response(ServerFunctions.Run(e.Data));
             };
             handler.Init(PORT);
+            while (true) {
+                Console.WriteLine(ServerFunctions.Run(Console.ReadLine()));
+            }
             Thread.Sleep(-1);
         }
     }
